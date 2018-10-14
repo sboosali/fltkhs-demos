@@ -368,7 +368,7 @@ Executable fltkhs-clock
 Executable fltkhs-fd-example
   Main-Is: fd-example.hs
   Hs-Source-Dirs: src/Examples
-  Extra-Source-Files:
+  Includes:
     src/Examples/PopenShim.H
   C-Sources:
     src/Examples/PopenShim.c

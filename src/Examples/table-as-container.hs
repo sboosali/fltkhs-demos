@@ -87,14 +87,14 @@ initializeTable t = do
   begin t
   setColHeader t True
   setColResize t True
-  setColHeaderHeight t 25
+  setColHeaderHeight t (25*2)
   setRowHeader t True
   setRowResize t True
-  setRowHeaderWidth t 80
+  setRowHeaderWidth t (80*2)
   end t
 main :: IO ()
 main = do
-  win <- doubleWindowNew (toSize (940,500)) Nothing (Just "table as container")
+  win <- doubleWindowNew (toSize (940*2,500*2)) Nothing (Just "table as container")
   win_w <- getW win
   win_h <- getH win
   begin win
@@ -106,7 +106,7 @@ main = do
             defaultCustomWidgetFuncs
             defaultCustomTableFuncs
   initializeTable table
-  setTableSize table 50 50
+  setTableSize table (50*2) (50*2)
   end win
   setResizable win (Just table)
   showWidget win
